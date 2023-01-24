@@ -1,0 +1,65 @@
+
+
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img
+{
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+}
+
+nav a:hover{
+    color: #6cd4ff;
+}
+
+.container{
+    flex-wrap: wrap;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+
+.one{
+    height: 300px;
+    width: 300px;
+    background: #a8dadc;
+    border-radius: 15px;
+}
+
+.two{
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    background: #457b9d;
+}
+
+.three{
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    background: #1d3557;
+}
+
+@media (max-width:600px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+@media(max-width:1000px){
+    .container{
+        margin-top: 30px;
+    }
+}

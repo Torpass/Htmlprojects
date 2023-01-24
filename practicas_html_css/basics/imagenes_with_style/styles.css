@@ -1,0 +1,84 @@
+body{
+    background: rgb(41, 41, 41);
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.imagenes_container
+{
+    height: 100vh;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.imagenes_container .imagen{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imagenes_container .imagen img{
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagenes_container .imagen .nombre{
+    position: absolute;
+    background-color: rgb(91, 91, 91);
+    color: white;
+    border-radius: 10px;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -50px;
+    padding: 10px;
+
+}
+
+
+.imagenes_container .imagen .nombre .texto{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.imagenes_container .imagen .nombre::before{
+     content:'';
+     position: absolute;
+     width: 3px;
+     height: 3px;
+     bottom: -20px;
+     left: 40%;
+     border-top: 10px solid rgb(91, 91, 91);;
+     border-left:  10px solid transparent;
+     border-right:  10px solid transparent;
+     border-bottom:  10px solid transparent;
+
+}
+
+.imagenes_container .imagen:hover .nombre{
+    display:flex;
+    transform: translateY(-5px);
+}
+
+.imagen:hover img{
+    transform: translateY(-20px);
+}
+
+@media(max-width:520px){
+    .imagenes_container{
+        flex-direction: column;
+        height: 180vh;
+    }
+}
