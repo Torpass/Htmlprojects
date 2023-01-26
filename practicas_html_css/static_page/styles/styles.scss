@@ -1,0 +1,249 @@
+body
+ {
+    padding: 0;
+    margin:0;
+    background: #2b2d42;
+    font-family: sans-serif;
+}
+
+.header{
+    padding: 15px 10px;
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+
+    &__container{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    &__img{
+        height: 60px;
+        transition:all 1.4s ease;
+    }
+    &__img:hover{
+        transform:scale(1.25);
+    }
+
+    &__nav a{
+        margin-left: 30px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Roboto';
+        text-decoration: none;
+        transition:all .9s;
+        font-weight: bold;
+    }
+
+    &__nav a:hover{
+        color: aqua;
+        text-shadow: 0px 0px 20px aqua;
+    }
+}
+
+@media (max-width:800px){
+    .header .header__container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__a{
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .zonas{
+        display: flex;
+        flex-direction: column;
+        p{
+            display: none;
+        }
+        
+    }
+}
+
+
+
+.hero{
+    height: 100vh;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(0deg, rgb(0,0,0, 0.7), rgb(0,0,0,0.3)),url(../img/FondoPrincipal.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__button{
+        font-size: 40px;
+    }
+}
+
+.hero2{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    &__imagen{
+        background-image: url('../img/quetrata.webp');
+        border-radius: 20px;
+        background-position: center center;
+        background-size: cover;
+        height: 500px;
+        width: 400px;
+    }
+
+    &__content-container{
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        padding: 200px 12px;
+        span{
+            color: grey;
+            text-decoration:underline;
+        }
+        &__text{
+            h2{
+                margin-top: 0px;
+            }
+            color: white;
+            width: 45%;
+            text-align: initial;
+            padding: 0px 30px;
+            padding-left: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 600px;
+        }
+    }
+}
+
+.zonas{
+    h2{
+        font-size: 2rem;
+        margin-top: 0px;
+    }
+    color: white;
+    padding: 100px 0px;
+    background: rgb(74, 74, 74);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    &__cartas{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+    }
+
+    &__cartas__jardin{
+        background-image: linear-gradient(0deg, rgb(0,0,0, 0.5), rgb(0,0,0,0.5)),url(../img/jardines.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 50px 0px;
+        margin: 20px;
+        transition:all 0.5s ease;
+        border-radius: 20px;
+        width: 30vw;
+    }
+    &__cartas__jardin:hover{
+            box-shadow: 0px 0px 15px rgb(31, 113, 31);
+            transform:scale(1.03);
+    }
+    
+
+    &__cartas__cristal{
+         background-image: linear-gradient(0deg, rgb(0,0,0, 0.5), rgb(0,0,0,0.5)),url(../img/cristales.jpg);
+         padding: 50px 0px;
+         margin: 20px;
+         border-radius: 20px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center center;
+         transition:all 0.5s ease;
+         width: 30vw;
+    }
+    &__cartas__cristal:hover{
+        box-shadow: 0px 0px 15px blueviolet;
+        transform:scale(1.03);
+    }
+
+
+    &__cartas__ciudad{
+        background-image: linear-gradient(0deg, rgb(0,0,0, 0.5), rgb(0,0,0,0.5)),url(../img/ciudad.jpg);
+        padding: 50px 0px;
+        margin: 20px;
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        transition:all 0.5s ease;
+        width: 30vw;
+    }
+    &__cartas__ciudad:hover{
+        box-shadow: 0px 0px 15px rgb(44, 44, 166);
+        transform:scale(1.03);
+    }
+}
+
+
+.empezar{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    &__button{
+        font-size: 3vw;
+    }
+    h3{
+        font-size: 5vw;
+    }
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+button{
+    background-color: white;
+    border-radius: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: auto;
+    font-size: 20px;
+    border: none;
+    transition:all 0.7s ease;
+}
+
+button:hover{
+    box-shadow: 0px 0px 15px white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
