@@ -2,29 +2,34 @@ body
  {
     padding: 0;
     margin:0;
-    background: #2b2d42;
+    background: #2C385E;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .header{
     padding: 15px 10px;
-    background-color: grey;
+    justify-items: center;
+    background-color: #2C385E;
     position: fixed;
+    z-index:1000;
     width: 100%;
-    height: 7vh;
+    height: auto;
 
     &__container{
         max-width: 1200px;
         margin: auto;
         display: flex;
         flex-direction: row;
+        text-align: center;
         justify-content:space-between;
         align-items: center;
     }
 
     &__img{
-        height: 60px;
+        height: 80px;
         transition:all 1.4s ease;
+        margin-bottom: -35px;
     }
     &__img:hover{
         transform:scale(1.25);
@@ -60,15 +65,6 @@ body
             }
         }
     }
-
-    .zonas{
-        display: flex;
-        flex-direction: column;
-        p{
-            display: none;
-        }
-        
-    }
 }
 
 
@@ -81,14 +77,43 @@ body
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100vw;
+
     color: white;
     background-image: linear-gradient(0deg, rgb(0,0,0, 0.7), rgb(0,0,0,0.3)),url(../img/FondoPrincipal.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    &__button{
-        font-size: 40px;
+
+    &__button
+    {
+        background-color: initial;
+        background-image: linear-gradient(#006aa3,#003566 100%);
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        font-size: 24px;
+        font-weight: 500px;
+        height: 120px;
+        line-height: 80px;
+        margin-left: -4px;
+        outline: 0;
+        text-align: center;
+        transition: all .3s cubic-bezier(.05, .03, .35, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: bottom;
+        width: 250px;
     }
+
+    &__button:focus { color: #171e29; }
+    &__button:hover { opacity: .7; }
+
 }
 
 .hero2{
@@ -96,7 +121,6 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 
     &__imagen{
         background-image: url('../img/quetrata.webp');
@@ -135,12 +159,16 @@ body
 
 .zonas{
     h2{
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: 0px;
+        margin-bottom: 100px;
     }
     color: white;
-    padding: 100px 0px;
-    background: rgb(74, 74, 74);
+    padding: 100px 10px;
+    background-image:  linear-gradient(0deg, rgb(0,0,0, 0.6), rgb(0,0,0,0.6)), url(../img/hollownest.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center center;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -153,97 +181,239 @@ body
         justify-content: center;
         align-items: center;
         text-align: center;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 
     &__cartas__jardin{
-        background-image: linear-gradient(0deg, rgb(0,0,0, 0.5), rgb(0,0,0,0.5)),url(../img/jardines.webp);
+        background-image: linear-gradient(0deg, rgb(0,0,0, 0.3), rgb(0,0,0,0.3)),url(../img/jardines.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        padding: 50px 0px;
+        padding: 50px 15px;
         margin: 20px;
+        transition: opacity 0.9s ease-in-out;
         transition:all 0.5s ease;
         border-radius: 20px;
-        width: 30vw;
+        width: 400px;
     }
+
     &__cartas__jardin:hover{
-            box-shadow: 0px 0px 15px rgb(31, 113, 31);
+            box-shadow: 0px 0px 15px rgb(53, 194, 53);
             transform:scale(1.03);
     }
     
 
     &__cartas__cristal{
-         background-image: linear-gradient(0deg, rgb(0,0,0, 0.5), rgb(0,0,0,0.5)),url(../img/cristales.jpg);
-         padding: 50px 0px;
+         background-image: linear-gradient(0deg, rgb(0,0,0, 0.3), rgb(0,0,0,0.3)),url(../img/cristales.jpg);
+         padding: 50px 15px;
          margin: 20px;
          border-radius: 20px;
          background-repeat: no-repeat;
          background-size: cover;
          background-position: center center;
          transition:all 0.5s ease;
-         width: 30vw;
+        width: 400px;
+        
     }
     &__cartas__cristal:hover{
-        box-shadow: 0px 0px 15px blueviolet;
+        box-shadow: 0px 0px 15px rgb(176, 91, 255);
         transform:scale(1.03);
     }
 
 
     &__cartas__ciudad{
-        background-image: linear-gradient(0deg, rgb(0,0,0, 0.5), rgb(0,0,0,0.5)),url(../img/ciudad.jpg);
-        padding: 50px 0px;
+        background-image: linear-gradient(0deg, rgb(0,0,0, 0.3), rgb(0,0,0,0.3)),url(../img/ciudad.jpg);
+        padding: 50px 15px;
         margin: 20px;
         border-radius: 20px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         transition:all 0.5s ease;
-        width: 30vw;
+        width: 400px;
+
     }
     &__cartas__ciudad:hover{
-        box-shadow: 0px 0px 15px rgb(44, 44, 166);
+        box-shadow: 0px 0px 15px rgb(85, 85, 249);
         transform:scale(1.03);
     }
 }
 
 
+.personajes{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    h2{
+        font-size: 4rem;
+        margin-top: 0px;
+    }
+
+    &__content{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        flex-direction: column;
+        width: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        &__text{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__container{
+        align-items:center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        &__imagen{
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+
+            &__nombre{
+                position: absolute;
+                background-color: #4D7FA4;
+                color: white;
+                border-radius: 10px;
+                font-size: 22px;
+                display: none;
+                min-width: 100px;
+                width: 200px;
+                top: -60px;
+                padding: 10px;
+
+                &__texto{
+                    display:inline-flex;
+                    text-overflow:ellipsis;
+                    white-space:pre-wrap;
+                    width: 100px;
+                    text-align: center;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                }
+            }
+
+            &__nombre::before{
+                content:'';
+                position: absolute;
+                width: 3px;
+                height: 3px;
+                bottom: -20px;
+                left: 40%;
+                border-top: 10px solid #4D7FA4;
+                border-left:  10px solid transparent;
+                border-right:  10px solid transparent;
+                border-bottom:  10px solid transparent;
+            }
+        }
+
+        .personajes__container__imagen:hover .personajes__container__imagen__nombre{
+            display: flex;
+            transform: translateY(-20px);
+        }
+      
+        &__imagen img{
+            width: 280px;
+            height: 280px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &__imagen:hover img{
+            transform: translateY(-20px);
+        }
+    }    
+}
+
 .empezar{
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image:linear-gradient(0deg, rgb(0,0,0, 0.3), rgb(0,0,0,0.3)), url(../img/fondofinal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     align-items: center;
     color: white;
-    &__button{
-        font-size: 3vw;
+    &__button
+    {
+        background-color: initial;
+        background-image: linear-gradient(#006aa3,#003566 100%);
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        font-size: 24px;
+        font-weight: 500px;
+        height: 120px;
+        line-height: 80px;
+        margin-left: -4px;
+        outline: 0;
+        text-align: center;
+        transition: all .3s cubic-bezier(.05, .03, .35, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: bottom;
+        width: 250px;
     }
+    &__button:focus { color: #171e29; }
+    &__button:hover { opacity: .7; }
     h3{
         font-size: 5vw;
     }
 }
 
-.container{
-    max-width: 1100px;
-    margin: auto;
+@media (max-width:800px){
+    .personajes{
+        flex-direction: column;
+        height: auto;
+        &__content{
+            h2{
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    
+    }
+    .zonas{
+            display: flex;
+            flex-direction: column;
+            p{
+                display: none;
+            }
+        &__cartas{
+            flex-direction: column;
+        }   
+    }
 }
 
-button{
-    background-color: white;
-    border-radius: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: auto;
-    font-size: 20px;
-    border: none;
-    transition:all 0.7s ease;
+.footer{
+    display: flex;
+    justify-content:right;
+    color: white;
+
 }
 
-button:hover{
-    box-shadow: 0px 0px 15px white;
-}
+
+
+
 
 html{
     scroll-behavior: smooth;
+    scrollbar-color: black;
+    overflow: auto;
 }
-
-
